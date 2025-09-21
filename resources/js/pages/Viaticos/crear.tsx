@@ -84,7 +84,7 @@ export default function Create({}: PageProps) {
     return (
         <AppLayout>
             <Head title="Generar Viático" />
-            <h2 className="text-xl leading-tight font-semibold text-gray-800">Generador de Documento de Viático</h2>
+            <h2 className="text-xl leading-tight font-semibold text-gray-800">Generador de Documento de Viático Rápido</h2>
             <div className="py-12">
                 <div className="mx-auto max-w-2xl sm:px-6 lg:px-8">
                     <Card>

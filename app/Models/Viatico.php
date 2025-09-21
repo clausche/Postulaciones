@@ -13,7 +13,7 @@ class Viatico extends Model
         'nombre','rut','escalafon','grado','funcion',
         'lugar','motivo','dia_salida','hora_salida',
         'dia_regreso','hora_regreso','vehiculo','patente',
-        'resolucion','docx_path'
+        'resolucion','mes_ano','docx_path'
     ];
 
     protected $casts = [

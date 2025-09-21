@@ -15,7 +15,9 @@ class ViaticoPlantillaController extends Controller
 {
     public function create(): Response
     {
-        return Inertia::render('Viaticos/crear');
+        return Inertia::render('Viaticos/crea_new', [
+            'csrf_token' => csrf_token(),
+        ]);
     }
 
     /** Convierte {{campo}} -> ${campo} en document.xml / headers / footers */

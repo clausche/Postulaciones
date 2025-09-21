@@ -29,6 +29,11 @@ const mainNavItems: NavItem[] = [
         icon: Car,
     },
     {
+        title: 'Viático Simple 2025',
+        href: '/viatico/crea_new',
+        icon: Car,
+    },
+    {
         title: 'Viático 2025',
         href: '/viaticos/create',
         icon: Banana,

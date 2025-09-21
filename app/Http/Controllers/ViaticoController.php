@@ -60,7 +60,7 @@ class ViaticoController extends Controller
             }
 
             // Plantilla en storage/app/viatico.docx
-            $original = Storage::path('app/viatico.docx');
+            $original = Storage::path('viatico.docx');
             if (!is_file($original)) {
                 throw new \RuntimeException('Falta plantilla: ' . $original);
             }
@@ -106,7 +106,8 @@ class ViaticoController extends Controller
             $tp->setValue('vehiculo',      $viatico->vehiculo ?: 'M05');
             $tp->setValue('patente',       (string)($viatico->patente ?? ''));
             $tp->setValue('resolucion',    (string)($viatico->resolucion ?? ''));
-            $tp->setValue('mes_ano',       $viatico->mes_ano);
+            //$tp->setValue('mes_ano',       $viatico->mes_ano);
+            $tp->setValue('mes_ano', $data['mes_ano']);
 
             // Guardar salida en storage/app/viaticos/
             $filename = 'viatico_' . now('America/Santiago')->format('d-m-Y_H-i') . '.docx';

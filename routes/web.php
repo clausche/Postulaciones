@@ -34,9 +34,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return Inertia::render('dashboard');
     })->name('dashboard');
     Route::resource('applicants', ApplicantController::class);
+
     Route::resource('surveys', SurveyController::class);
+
     Route::get('/viatico/crear', [ViaticoPlantillaController::class, 'create'])->name('viatico.crear');
+    Route::get('/viatico/crea_new', [ViaticoPlantillaController::class, 'create'])->name('viatico.crea_new');
+
     Route::post('/viatico/generar', [ViaticoPlantillaController::class, 'generate'])->name('viatico.generate');
+
     Route::get('/viaticos/create', [ViaticoController::class, 'create'])->name('viaticos.create');
     // POST devuelve archivo (no Inertia Response), ideal para descarga inmediata
     Route::post('/viaticos', [ViaticoController::class, 'store'])->name('viaticos.store');
